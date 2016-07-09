@@ -1,0 +1,405 @@
+@font-face {font-family: 'OpenSans Regular'; src: url('../fonts/OpenSans-Regular.ttf');}
+@font-face {font-family: 'OpenSans SemiBold'; src: url('../fonts/OpenSans-Semibold.ttf');}
+@font-face {font-family: 'OpenSans Light'; src: url('../fonts/OpenSans-Light.ttf');}
+
+/* general rules */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "OpenSans Light", sans-serif;
+    color: #1b1b1b;
+    line-height: 1.3;
+}
+a, button, input[type="submit"] {
+    cursor: pointer;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+}
+a, a:active {
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+button, button:hover, button:active {
+    outline: none;
+    border: none;
+}
+button::-moz-focus-inner {
+    outline: none;
+    border: none;
+}
+input, input:hover, input:active, input:focus {
+    outline: none;
+    border: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 235px;
+    position: relative;
+    overflow: hidden;
+}
+
+.block-content {
+    width: 100%;
+    max-width: 1170px;
+    padding: 0 2.5%;
+    margin: 0 auto;
+}
+
+.form-field::-webkit-input-placeholder {font-size: 18px;color: #fadc26;opacity: 1;}
+.form-field::-moz-placeholder {font-size: 18px;color: #fadc26;opacity: 1;}
+.form-field:-moz-placeholder {font-size: 18px;color: #fadc26;opacity: 1;}
+.form-field:-ms-input-placeholder {font-size: 18px;color: #fadc26;opacity: 1;}
+
+.form-field:focus::-webkit-input-placeholder {color: transparent;}
+.form-field:focus::-moz-placeholder {color: transparent;}
+.form-field:focus:-moz-placeholder {color: transparent;}
+.form-field:focus:-ms-input-placeholder {color: transparent;}
+
+img {
+    display: block;
+}
+
+ul li {
+    display: inline-block;
+}
+
+.left-column {
+    float: left;
+}
+.right-column {
+    float: right;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+/* header */
+.header-top {
+    background: #fadc26;
+    text-align: center;
+}
+.header-top .text {
+    display: inline-block;
+    margin: 1% 0;
+    font-family: "OpenSans SemiBold", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.header-top .text:nth-child(2) {
+    margin: 1% 12.5%;
+}
+.icon-star {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url('../images/icon-star.png') no-repeat center;
+    background-size: cover;
+    margin-right: 10px;
+}
+.header-bottom {
+    background: #1b1b1b;
+}
+.header-bottom .block-content {
+    padding: 0;
+}
+.header-bottom .left-column {
+    width: 33%;
+    text-align: right;
+}
+.logo {
+    display: block;
+    width: 100%;
+    padding-top: 18.39378238341969%;
+    background: url('../images/logo.png') no-repeat center;
+    background-size: cover;
+    margin-top: 20px;
+}
+.header-menu {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    margin: 5px 8% 0 0;
+}
+.header-menu .title {
+    color: #ffffff;
+    font-size: 18px;
+    padding: 5px 25px 5px 0;
+}
+.header-menu .title:after {
+    content: '\25bc';
+    display: block;
+    font-size: 12px;
+    height: 12px;
+    position: absolute;
+    margin: auto;
+    right: 7px;
+    top: 2px;
+    bottom: 0;
+    line-height: 1;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.header-menu:hover .title {
+    color: #fadc26;
+}
+.header-menu:hover .title:after {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.header-menu ul {
+    display: none;
+    width: 330px;
+    text-align: left;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    padding: 15px 20px;
+    background: #1b1b1b;
+}
+.for-children ul {
+    left: auto;
+    right: 0;
+}
+.header-menu ul li {
+    display: block;
+    margin: 5px 0;
+}
+.header-menu ul li a {
+    color: #ffffff;
+    font-size: 14px;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+}
+.header-menu ul li a:hover {
+    color: #fadc26;
+}
+.header-menu:hover ul {
+    display: block;
+}
+.phones {
+    margin: 0 0 15px 0;
+}
+.phones .title {
+    font-family: "OpenSans Regular", sans-serif;
+    color: #1b1b1b;
+    font-size: 12px;
+    padding: 5px 25px 3px 35px;
+    background: #fadc26;
+    text-transform: uppercase;
+    position: relative;
+}
+.phones .title:before {
+    content: '';
+    display: block;
+    height: 17px;
+    width: 17px;
+    background: url('../images/icon-phone.png') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    left: 10px;
+    top: 3px;
+}
+.phones .title:after {
+    top: 3px;
+    right: 5px;
+}
+.phones:hover .title {
+    color: #1b1b1b;
+}
+.phones ul {
+    width: 100%;
+    padding: 10px 0;
+    background: #fadc26;
+    border-top: 2px solid #1b1b1b;
+    text-align: center;
+    top: 100%;
+    left: 0;
+}
+.phones ul li {
+    margin: 2px 0;
+    font-family: "OpenSans SemiBold", sans-serif;
+    font-size: 15px;
+    color: #1b1b1b;
+}
+.info ul {
+    width: 100%;
+}
+.info .title {
+    padding: 2px 30px;
+    border: 1px solid #ffffff;
+    font-size: 14px;
+}
+.info:hover .title {
+    color: #ffffff;
+}
+.info ul {
+    padding: 10px;
+}
+.info ul li a {
+    color: #fadc26;
+    font-size: 12px;
+}
+.header-bottom .right-column {
+    width: 55%;
+    position: relative;
+}
+.form-search {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 60%;
+    border-top: 1px solid #545454;
+    position: relative;
+}
+.form-search input[type="text"] {
+    font-size: 18px;
+    color: #ffffff;
+    width: 90%;
+    background: transparent;
+    padding: 8px 10px 8px 25px;
+}
+.form-search:after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url('../images/icon-search.png') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+.basket {
+    display: inline-block;
+    margin-left: 7.5%;
+    border-left: 1px solid #545454;
+}
+.basket .goods-amount {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 20px 0 20px 20px;
+    text-align: center;
+}
+.basket .icon-basket {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    background: url('../images/icon-cart-white.png') no-repeat center;
+    background-size: cover;
+}
+.header-bottom .border-line {
+    width: 500%;
+    border-top: 1px solid #ffffff;
+    position: absolute;
+    left: 0;
+    top: 75px;
+}
+
+/* slider */
+.slider {
+    height: 320px;
+    padding: 0;
+    position: relative;
+    margin-bottom: 20px;
+}
+.slide, .slide a {
+    display: block;
+    width: 100%;
+    height: 320px;
+}
+.slide a {
+    position: relative;
+}
+.slide a img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.slick-dots {
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+}
+.slick-dots li {
+    margin: 3px;
+}
+.slick-dots button {
+    width: 16px;
+    height: 16px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 4px solid #ffffff;
+    background: #ffffff;
+    font-size: 0;
+    line-height: 0;
+}
+.slick-dots button:hover {
+    background: #cccccc;
+}
+.slick-dots .slick-active button {
+    background: #000000;
+}
+
+/* footer */
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 235px;
+    width: 100%;
+}
+.footer-top {
+    height: 195px;
+    background: #1b1b1b;
+}
+.footer-bottom {
+    height: 40px;
+    background: #000000;
+}
