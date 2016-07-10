@@ -1,6 +1,7 @@
 @font-face {font-family: 'OpenSans Regular'; src: url('../fonts/OpenSans-Regular.ttf');}
 @font-face {font-family: 'OpenSans SemiBold'; src: url('../fonts/OpenSans-Semibold.ttf');}
 @font-face {font-family: 'OpenSans Light'; src: url('../fonts/OpenSans-Light.ttf');}
+@font-face {font-family: 'OpenSans ExtraBold'; src: url('../fonts/OpenSans-ExtraBold.ttf');}
 
 /* general rules */
 * {
@@ -57,8 +58,11 @@ html, body {
 .block-content {
     width: 100%;
     max-width: 1170px;
-    padding: 0 2.5%;
+    padding: 0 1.5%;
     margin: 0 auto;
+}
+.main-catalog {
+    padding-right: 0;
 }
 
 .form-field::-webkit-input-placeholder {font-size: 18px;color: #fadc26;opacity: 1;}
@@ -133,6 +137,7 @@ h2 {
 .header-bottom .left-column {
     width: 33%;
     text-align: right;
+    margin-left: 1.5%;
 }
 .logo {
     display: block;
@@ -144,14 +149,14 @@ h2 {
 }
 .header-menu {
     display: inline-block;
-    cursor: pointer;
     position: relative;
-    margin: 5px 8% 0 0;
+    margin: 5px 8% 15px 0;
 }
 .header-menu .title {
     color: #ffffff;
     font-size: 18px;
     padding: 5px 25px 5px 0;
+    cursor: pointer;
 }
 .header-menu .title:after {
     content: '\25bc';
@@ -207,6 +212,7 @@ h2 {
     -ms-transition: 0.1s;
     -o-transition: 0.1s;
     transition: 0.1s;
+    cursor: pointer;
 }
 .header-menu ul li a:hover {
     color: #fadc26;
@@ -280,6 +286,7 @@ h2 {
 .header-bottom .right-column {
     width: 55%;
     position: relative;
+    margin-right: 1.5%;
 }
 .form-search {
     display: inline-block;
@@ -338,18 +345,17 @@ h2 {
 
 /* slider */
 .slider {
-    height: 320px;
     padding: 0;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
 }
 .slide, .slide a {
     display: block;
     width: 100%;
-    height: 320px;
 }
 .slide a {
     position: relative;
+    padding: 27.35042735042735% 0 0 0;
 }
 .slide a img {
     width: 100%;
@@ -387,6 +393,197 @@ h2 {
     background: #000000;
 }
 
+/* side panel */
+.side-panel {
+    width: 22%;
+}
+.side-panel .title {
+    font-size: 18px;
+    color: #ffffff;
+    background: #1b1b1b;
+    padding: 2.5% 10%;
+}
+nav ul {
+    display: block;
+    padding: 5% 0;
+    margin-bottom: 30%;
+    border: 1px solid #1b1b1b;
+}
+nav ul li {
+    display: block;
+}
+nav ul li a {
+    display: block;
+    padding: 2% 7%;
+    font-size: 16px;
+}
+nav ul li a:hover, nav ul li.active a  {
+    background: #fadc26;
+    text-decoration: none;
+}
+.news {
+    margin-top: 10%;
+    border: 1px solid #1b1b1b;
+}
+.news-image {
+    display: block;
+    width: 100%;
+    padding-top: 50.19762845849802%;
+    position: relative;
+    overflow: hidden;
+}
+.news-image img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.news-title {
+    display: inline-block;
+    font-family: "OpenSans SemiBold", sans-serif;
+    font-size: 16px;
+    color: #f79c2d;
+    margin: 4% 8%;
+}
+.news-text {
+    font-size: 12px;
+    padding: 0 8% 5% 8%;
+}
+
+.main-panel {
+    width: 78%;
+    text-align: center;
+}
+.product-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 28%;
+    margin: 0 2% 4%;
+
+}
+.product-image {
+    display: block;
+    width: 100%;
+    padding-top: 120%;
+    border: 1px solid transparent;
+    border-bottom: none;
+    position: relative;
+}
+.product-image img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 5%;
+}
+.product-card .product-name {
+    display: block;
+    width: 100%;
+    font-family: "OpenSans Regular", sans-serif;
+    font-size: 14px;
+    padding-bottom: 2.5%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.product-card:hover .product-image {
+    border: 1px solid #1b1b1b;
+    border-bottom: none;
+}
+.product-image:hover .product-name {
+    text-decoration: underline;
+}
+.product-card .cost {
+    display: block;
+    width: 45%;
+    height: 45px;
+    background: #1b1b1b;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 45px;
+}
+.product-card .cost .cost-value {
+    font-family: "OpenSans ExtraBold", sans-serif;
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 45px;
+}
+.product-card button {
+    display: block;
+    width: 55%;
+    height: 45px;
+    background: #f79c2d;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 45px;
+    color: #ffffff;
+    font-family: "OpenSans Regular", sans-serif;
+    padding-left: 15%;
+    position: relative;
+}
+.product-card button:before {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: url('../images/icon-cart-white.png') no-repeat center;
+    background-size: cover;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10%;
+}
+
+/* reviews */
+.reviews {
+    margin: 0 0 2.5%;
+}
+.reviews li {
+    width: 30%;
+    vertical-align: top;
+}
+.reviews li:nth-child(2) {
+    margin: 0 4.5%;
+}
+.reviewer-name {
+    display: inline-block;
+    font-family: "OpenSans Regular", sans-serif;
+    font-size: 14px;
+    color: #f79c2d;
+}
+.review-date {
+    display: inline-block;
+    font-size: 12px;
+    color: #cfcfcf;
+    margin-left: 10px;
+}
+.review-text {
+    display: flex;
+    height: 100px;
+    font-size: 13px;
+    border: 1px solid #dddddd;
+    flex-direction: column;
+    justify-content: center;
+    background: #f6f6f6;
+    margin-top: 4%;
+    padding: 0 5%;
+    position: relative;
+}
+.review-text .decor {
+    display: block;
+    width: 16px;
+    height: 14px;
+    background: url('../images/decor-for-review.png') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    left: 20px;
+    top: -12px;
+    z-index: 1;
+}
+
+
 /* footer */
 .footer {
     position: absolute;
@@ -398,8 +595,191 @@ h2 {
 .footer-top {
     height: 195px;
     background: #1b1b1b;
+    padding-top: 1%;
+}
+.footer-top .title {
+    font-family: "OpenSans SemiBold", sans-serif;
+    font-size: 16px;
+    color: #fadc26;
+}
+.footer-nav {
+    width: 20%;
+}
+.footer-nav ul {
+    margin-top: 10%;
+}
+.footer-nav ul li {
+    width: 48%;
+    margin: 1.5% 0;
+}
+.footer-nav ul li a {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    font-size: 14px;
+}
+.footer-top .delivery {
+    width: 55%;
+    text-align: center;
+}
+.image-map {
+    display: inline-block;
+    width: 186px;
+    height: 117px;
+    background: url('../images/image-map.png') no-repeat center;
+    background-size: cover;
+    margin-top: 2.5%;
+}
+.footer-top .payment {
+    width: 25%;
+}
+.image-payment {
+    display: block;
+    width: 100%;
+    padding-top: 29.82233502538071%;
+    background: url('../images/visa_mastercard.png') no-repeat center;
+    background-size: cover;
+    margin-top: 10%;
 }
 .footer-bottom {
     height: 40px;
     background: #000000;
+}
+.footer-bottom .copyrights {
+    width: 70%;
+    text-align: right;
+    color: #ffffff;
+    line-height: 40px;
+    font-size: 14px;
+    opacity: 0.3;
+}
+.footer-bottom .our-email {
+    width: 25%;
+    line-height: 40px;
+    font-size: 14px;
+    color: #fadc26;
+    text-align: right;
+}
+.footer-bottom .our-email a {
+    line-height: 40px;
+    font-size: 14px;
+    color: #fadc26;
+}
+
+
+/* media queries */
+@media (max-width: 1170px) {
+    .header-menu {
+        margin: 5px 5% 10px 0;
+    }
+    .reviews {
+        margin: 2.5% 0;
+    }
+    .product-card .cost {
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+    }
+    .product-card .cost .cost-value {
+        font-size: 22px;
+        line-height: 40px;
+    }
+    .product-card button {
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+    }
+    .product-card button:before {
+        width: 25px;
+        height: 25px;
+    }
+}
+@media (max-width: 1024px) {
+    .header-top .text {
+        font-size: 12px;
+    }
+    .header-bottom .left-column {
+        width: 28%;
+    }
+    .header-bottom .right-column {
+        width: 67%;
+    }
+    .header-menu {
+        margin: 5px 2.5% 10px 0;
+    }
+    .header-menu .title {
+        font-size: 16px;
+    }
+    .phones .title {
+        font-size: 12px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+    .news-title {
+        font-size: 14px;
+    }
+    .news-text {
+        font-size: 10px;
+    }
+    .review-text {
+        height: 110px;
+    }
+    .footer-top .title {
+        font-size: 14px;
+    }
+    .footer-nav ul li a {
+        font-size: 12px;
+    }
+    .footer-bottom .copyrights, .footer-bottom .our-email, .footer-bottom .our-email a {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .product-card .cost {
+        height: 35px;
+        font-size: 12px;
+        line-height: 35px;
+    }
+    .product-card .cost .cost-value {
+        font-size: 20px;
+        line-height: 35px;
+    }
+    .product-card button {
+        height: 35px;
+        font-size: 14px;
+        line-height: 35px;
+    }
+    .product-card button:before {
+        width: 20px;
+        height: 20px;
+    }
+    .review-text {
+        height: 110px;
+        font-size: 11px;
+    }
+    .reviews li:nth-child(2) {
+        margin: 0 4%;
+    }
+    .footer-nav {
+        width: 25%;
+    }
+    .footer-top .title {
+        font-size: 12px;
+    }
+    .footer-top .delivery {
+        width: 50%;
+    }
+    .footer {
+        height: 200px;
+    }
+    .footer-top {
+        height: 160px;
+    }
+    .wrapper {
+        padding-bottom: 200px;
+    }
+
 }
