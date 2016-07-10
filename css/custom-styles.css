@@ -538,7 +538,7 @@ nav ul li a:hover, nav ul li.active a  {
 
 /* reviews */
 .reviews {
-    margin: 0 0 2.5%;
+    margin: 2% auto 2.5%;
 }
 .reviews li {
     width: 30%;
@@ -673,7 +673,7 @@ nav ul li a:hover, nav ul li.active a  {
         margin: 5px 5% 10px 0;
     }
     .reviews {
-        margin: 2.5% 0;
+        margin: 2.5% auto;
     }
     .product-card .cost {
         height: 40px;
