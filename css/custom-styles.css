@@ -619,6 +619,13 @@ nav ul li a:hover, nav ul li.active a  {
     bottom: 0;
     left: 10%;
 }
+.product-card button:hover {
+    color: #1b1b1b;
+}
+.product-card button:hover:before {
+    background: url('../images/icon-cart-black.png') no-repeat center;
+    background-size: cover;
+}
 .social-links {
     display: none;
 }
