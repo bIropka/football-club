@@ -619,6 +619,9 @@ nav ul li a:hover, nav ul li.active a  {
     bottom: 0;
     left: 10%;
 }
+.social-links {
+    display: none;
+}
 
 /* reviews */
 .reviews {
@@ -935,7 +938,7 @@ nav ul li a:hover, nav ul li.active a  {
         border: none;
         background: #ffffff;
         width: 90%;
-        margin: 0.25% auto;
+        margin: 1% auto;
     }
     .form-search input[type="text"] {
         font-size: 14px;
@@ -1119,6 +1122,90 @@ nav ul li a:hover, nav ul li.active a  {
     .product-image:hover .product-name {
         text-decoration: none;
     }
+    .reviews li {
+        display: block;
+        width: 87%;
+        margin: 0 auto;
+    }
+    .reviews li:nth-child(2) {
+        margin: 5% auto;
+    }
+    .reviewer-name {
+        font-size: 16px;
+    }
+    .review-date {
+        font-size: 14px;
+    }
+    .review-text {
+        height: auto;
+        padding: 5%;
+        font-size: 16px;
+    }
+    .social-links {
+        display: block;
+        text-align: center;
+    }
+    .social-links li {
+        margin: 2% 1.5% 5%;
+    }
+    .social-links li a {
+        display: block;
+        width: 75px;
+        padding-top: 75px;
+    }
+    .social-links .icon-vk {
+        background: #6996c7 url('../images/sprite-social.png') no-repeat left center;
+        background-size: cover;
+    }
+    .social-links .icon-tw {
+        background: #28c3ff url('../images/sprite-social.png') no-repeat center center;
+        background-size: cover;
+    }
+    .social-links .icon-google {
+        background: #ff6d4a url('../images/sprite-social.png') no-repeat right center;
+        background-size: cover;
+    }
+    .footer {
+        height: 255px;
+    }
+    .footer-top {
+        height: 195px;
+    }
+    .footer-bottom {
+        height: 60px;
+    }
+    .footer-top .footer-nav {
+        display: none;
+    }
+    .footer-top .delivery {
+        width: 55%;
+    }
+    .footer-top .payment {
+        width: 45%;
+    }
+    .footer-top .title {
+        font-size: 14px;
+        margin-top: 5px;
+        text-align: center;
+    }
+    .image-payment {
+        width: 85%;
+        padding-top: 25%;
+        margin: 20px auto 0;
+    }
+    .wrapper {
+        padding-bottom: 270px;
+    }
+    .footer-bottom .copyrights, .footer-bottom .our-email {
+        display: block;
+        width: 100%;
+        float: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        height: 30px;
+        line-height: 30px;
+    }
 
 }
 
@@ -1151,6 +1238,20 @@ nav ul li a:hover, nav ul li.active a  {
         width: 25px;
         height: 25px;
     }
+    .image-payment {
+        margin: 40px auto 0;
+    }
+    .footer-top .title {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .form-search {
+        display: block;
+        border: none;
+        background: #ffffff;
+        width: 90%;
+        margin: 1% auto 3%;
+    }
 }
 
 @media (max-width: 540px) {
@@ -1176,6 +1277,15 @@ nav ul li a:hover, nav ul li.active a  {
     .product-card button:before {
         width: 20px;
         height: 20px;
+    }
+    .reviewer-name, .review-text {
+        font-size: 14px;
+    }
+    .review-date {
+        font-size: 12px;
+    }
+    .image-payment {
+        margin: 50px auto 0;
     }
 }
 
@@ -1209,6 +1319,21 @@ nav ul li a:hover, nav ul li.active a  {
         width: 20px;
         height: 20px;
     }
+    .social-links li a {
+        width: 50px;
+        padding-top: 50px;
+    }
+    .image-map {
+        width: 140px;
+        height: 88px;
+        margin-top: 20px;
+    }
+    .footer {
+        height: 235px;
+    }
+    .footer-top {
+        height: 175px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1219,6 +1344,9 @@ nav ul li a:hover, nav ul li.active a  {
     }
     .product-card {
         width: 45%;
+    }
+    .reviews li {
+        width: 98%;
     }
 
 }

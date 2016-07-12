@@ -3,6 +3,7 @@ $(document).ready(function () {
     /** scripts for adaptive **/
     var menuInfo = $('.info-menu .sub-menu');
     var phones = $('.phones .sub-menu');
+    var email = $('.footer-bottom .our-email');
 
     if ($(window).width() < '801'){
         $('.basket').prependTo($('.header-bottom .block-content'));
@@ -18,9 +19,11 @@ $(document).ready(function () {
         if ($(window).width() < '801'){
             $('.basket').prependTo($('.header-bottom .block-content'));
             menuInfo.prependTo($('.mobile-sub-menu'));
+            phones.insertBefore($('.close-marker'));
         } else {
             $('.basket').insertAfter($('.form-search'));
             menuInfo.insertAfter($('.header-menu.info .title'));
+            phones.insertAfter($('.phones .title'));
         }
     });
 
