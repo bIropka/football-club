@@ -116,6 +116,7 @@ h2 {
     font-family: "OpenSans SemiBold", sans-serif;
     font-size: 16px;
     text-transform: uppercase;
+    line-height: 1;
 }
 .header-top .text:nth-child(2) {
     margin: 1% 12.5%;
@@ -151,6 +152,7 @@ h2 {
     -ms-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
+    z-index: 1;
 }
 .mobile-sub-menu.active {
     left: 0;
@@ -214,19 +216,16 @@ h2 {
 }
 .catalog-menu {
     display: inline-block;
-}
-.header-menu {
-    display: inline-block;
-    position: relative!important;
+    position: relative;
     margin: 5px 8% 15px 0;
 }
-.header-menu .title {
+.catalog-menu .title {
     color: #ffffff;
     font-size: 18px;
     padding: 5px 25px 5px 0;
     cursor: pointer;
 }
-.header-menu .title:after {
+.catalog-menu .title:after, .phones .title:after, .info-menu .title:after {
     content: '\25bc';
     display: block;
     font-size: 12px;
@@ -243,17 +242,17 @@ h2 {
     -o-transition: 0.5s;
     transition: 0.5s;
 }
-.header-menu:hover .title {
+.catalog-menu:hover .title {
     color: #fadc26;
 }
-.header-menu:hover .title:after {
+.catalog-menu:hover .title:after, .phones:hover .title:after, .info-menu:hover .title:after {
     -webkit-transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
     -o-transform: rotate(-180deg);
     transform: rotate(-180deg);
 }
-.sub-menu {
+.catalog-menu .sub-menu {
     display: none;
     width: 330px;
     text-align: left;
@@ -264,15 +263,15 @@ h2 {
     padding: 15px 20px;
     background: #1b1b1b;
 }
-.for-children-menu {
+.for-children .sub-menu {
     left: auto;
     right: 0;
 }
-.sub-menu li {
+.catalog-menu .sub-menu li {
     display: block;
     margin: 5px 0;
 }
-.sub-menu li a {
+.catalog-menu .sub-menu li a {
     color: #ffffff;
     font-size: 14px;
     -webkit-transition: 0.1s;
@@ -282,14 +281,16 @@ h2 {
     transition: 0.1s;
     cursor: pointer;
 }
-.sub-menu li a:hover {
+.catalog-menu .sub-menu li a:hover {
     color: #fadc26;
 }
-.header-menu:hover .sub-menu {
+.catalog-menu:hover .sub-menu, .phones:hover .sub-menu, .info-menu:hover .sub-menu {
     display: block;
 }
 .phones {
+    display: inline-block;
     margin: 0 0 15px 0;
+    position: relative;
 }
 .phones .title {
     font-family: "OpenSans Regular", sans-serif;
@@ -318,36 +319,51 @@ h2 {
 .phones:hover .title {
     color: #1b1b1b;
 }
-.phones ul {
+.phones .sub-menu {
+    display: none;
     width: 100%;
     padding: 10px 0;
     background: #fadc26;
     border-top: 2px solid #1b1b1b;
     text-align: center;
     top: 100%;
+    position: absolute;
     left: 0;
+    z-index: 1;
 }
-.phones ul li {
+.phones .sub-menu li {
     margin: 2px 0;
     font-family: "OpenSans SemiBold", sans-serif;
     font-size: 15px;
     color: #1b1b1b;
 }
-.info ul {
-    width: 100%;
+.info-menu {
+    display: inline-block;
+    position: relative;
 }
-.info .title {
-    padding: 2px 30px;
+.info-menu .title {
+    padding: 2px 33px;
     border: 1px solid #ffffff;
     font-size: 14px;
-}
-.info:hover .title {
     color: #ffffff;
 }
-.info ul {
+.info-menu .sub-menu {
+    display: none;
+    width: 100%;
     padding: 10px;
+    background: #1b1b1b;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
 }
-.info ul li a {
+.info-menu .sub-menu li {
+    display: block;
+    margin: 5px 0;
+}
+.info-menu .sub-menu li a {
+    display: block;
+    width: 100%;
     color: #fadc26;
     font-size: 12px;
 }
@@ -737,7 +753,7 @@ nav ul li a:hover, nav ul li.active a  {
 
 /* media queries */
 @media (max-width: 1170px) {
-    .header-menu {
+    .catalog-menu {
         margin: 5px 5% 10px 0;
     }
     .reviews {
@@ -772,10 +788,10 @@ nav ul li a:hover, nav ul li.active a  {
     .header-bottom .right-column {
         width: 67%;
     }
-    .header-menu {
+    .catalog-menu {
         margin: 5px 2.5% 10px 0;
     }
-    .header-menu .title {
+    .catalog-menu .title {
         font-size: 16px;
     }
     .phones .title {
@@ -853,41 +869,35 @@ nav ul li a:hover, nav ul li.active a  {
 }
 
 @media (max-width: 800px) {
-    .header {
-        margin-bottom: 3%;
-    }
     .header-top {
         height: 4px;
     }
-    .header-top .text {
+    .header-top .text, .slider, .catalog-menu, .phones, .info-menu, .side-panel .title, .news {
         display: none;
     }
-    .slider, .header-menu {
-        display: none;
-    }
-    .sub-menu {
-        position: relative;
-        z-index: 1;
-    }
-    .info-menu, .all-numbers {
+    .mobile-sub-menu ul:nth-child(1) {
         display: block;
         width: 100%;
         padding: 30px 0 5px;
     }
-    .info-menu li {
+    .mobile-sub-menu ul:nth-child(1) li {
+        display: block;
         width: 100%;
         border-bottom: 1px solid #545454;
     }
-    .info-menu li a {
+    .mobile-sub-menu ul:nth-child(1) li a {
         display: inline-block;
         font-size: 18px;
         padding: 2px 20px 7px;
+        color: #ffffff;
     }
-    .all-numbers {
+    .mobile-sub-menu ul:nth-child(2) {
+        display: block;
         padding: 5px 0 10px;
         text-align: center;
     }
-    .all-numbers li {
+    .mobile-sub-menu ul:nth-child(2) li {
+        display: block;
         font-size: 20px;
         color: #fadc26;
     }
@@ -913,7 +923,7 @@ nav ul li a:hover, nav ul li.active a  {
     .header-bottom .left-column, .header-bottom .right-column {
         float: none;
         width: 100%;
-        border: 1px solid transparent;
+        border-top: 1px solid transparent;
     }
     .logo {
         width: 32.5%;
@@ -970,16 +980,144 @@ nav ul li a:hover, nav ul li.active a  {
         text-align: center;
     }
     .catalog-menu .title {
+        display: block;
         font-family: "OpenSans SemiBold", sans-serif;
         font-size: 16px;
         color: #1b1b1b;
         text-transform: uppercase;
+        border-bottom: 1px solid #1b1b1b;
+        text-align: center;
     }
     .catalog-menu .title:after {
         display: none;
     }
-    .catalog-menu li {
-
+    .catalog-menu:hover .sub-menu, .phones:hover .sub-menu, .info-menu:hover .sub-menu {
+        display: none;
+    }
+    .catalog-menu:hover .title, .phones:hover .title, .info-menu:hover .title {
+        color: #1b1b1b;
+    }
+    .catalog-menu .sub-menu {
+        width: 100%;
+        background: #ececec;
+        position: static;
+    }
+    .catalog-menu .sub-menu li, nav ul li {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        border-bottom: 1px solid #1b1b1b;
+    }
+    .catalog-menu .sub-menu li:last-child, nav ul li:last-child {
+        border-bottom: none;
+    }
+    .catalog-menu .sub-menu li a, nav ul li a {
+        display: block;
+        color: #000000;
+        text-align: center;
+        padding: 5px 10px;
+        font-family: "OpenSans Regular", sans-serif;
+    }
+    .main-catalog {
+        padding: 0;
+    }
+    .side-panel {
+        background: #1b1b1b;
+        text-align: center;
+    }
+    .side-panel .prints-title {
+        display: inline-block;
+        padding: 0;
+        text-align: center;
+        color: #ffffff;
+        height: 40px;
+        font-family: "OpenSans SemiBold", sans-serif;
+        font-size: 18px;
+        line-height: 40px;
+        position: relative;
+        text-transform: uppercase;
+    }
+    .side-panel .prints-title:after {
+        content: '';
+        display: block;
+        width: 18px;
+        height: 9px;
+        background: url('../images/sprite-arrows.png') no-repeat right center;
+        background-size: cover;
+        position: absolute;
+        right: -20%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+    }
+    nav {
+        display: none;
+        background: #ececec;
+    }
+    nav ul {
+        border: none;
+        margin-bottom: 0;
+    }
+    .main-catalog .main-panel ul {
+        margin: 5% 0;
+    }
+    .product-card {
+        width: 40%;
+    }
+    .product-image {
+        border: none;
+    }
+    .product-card .cost {
+        display: block;
+        width: 45%;
+        height: 45px;
+        background: #1b1b1b;
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 45px;
+    }
+    .product-card .cost .cost-value {
+        font-family: "OpenSans ExtraBold", sans-serif;
+        color: #ffffff;
+        font-size: 28px;
+        line-height: 45px;
+    }
+    .product-card button {
+        display: block;
+        width: 55%;
+        height: 45px;
+        background: #f79c2d;
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 45px;
+        color: #ffffff;
+        font-family: "OpenSans Regular", sans-serif;
+        padding-left: 15%;
+        position: relative;
+    }
+    .product-card button:before {
+        content: '';
+        display: block;
+        width: 35px;
+        height: 35px;
+        background: url('../images/icon-cart-white.png') no-repeat center;
+        background-size: cover;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 10%;
+    }
+    .product-card:hover .product-image {
+        border: none;
+    }
+    .product-image:hover .product-name {
+        text-decoration: none;
     }
 
 }
@@ -995,6 +1133,24 @@ nav ul li a:hover, nav ul li.active a  {
         font-size: 12px;
         padding: 12% 0 12% 10px;
     }
+    .product-card .cost {
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+    }
+    .product-card .cost .cost-value {
+        font-size: 22px;
+        line-height: 40px;
+    }
+    .product-card button {
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+    }
+    .product-card button:before {
+        width: 25px;
+        height: 25px;
+    }
 }
 
 @media (max-width: 540px) {
@@ -1002,6 +1158,24 @@ nav ul li a:hover, nav ul li.active a  {
         width: 160px;
         padding-top: 29px;
         margin: 2% auto;
+    }
+    .product-card .cost {
+        height: 35px;
+        font-size: 12px;
+        line-height: 35px;
+    }
+    .product-card .cost .cost-value {
+        font-size: 20px;
+        line-height: 35px;
+    }
+    .product-card button {
+        height: 35px;
+        font-size: 14px;
+        line-height: 35px;
+    }
+    .product-card button:before {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -1022,6 +1196,19 @@ nav ul li a:hover, nav ul li.active a  {
         right: 20px;
         top: 4px;
     }
+    .product-card .cost {
+        font-size: 10px;
+    }
+    .product-card .cost .cost-value {
+        font-size: 18px;
+    }
+    .product-card button {
+        font-size: 12px;
+    }
+    .product-card button:before {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1030,4 +1217,8 @@ nav ul li a:hover, nav ul li.active a  {
         font-size: 10px;
         padding: 12% 0 12% 5px;
     }
+    .product-card {
+        width: 45%;
+    }
+
 }

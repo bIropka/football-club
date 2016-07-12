@@ -1,17 +1,17 @@
 $(document).ready(function () {
 
     /** scripts for adaptive **/
-    var menuInfo = $('.info-menu');
-    var allNumbers = $('.all-numbers');
+    var menuInfo = $('.info-menu .sub-menu');
+    var phones = $('.phones .sub-menu');
 
     if ($(window).width() < '801'){
         $('.basket').prependTo($('.header-bottom .block-content'));
         menuInfo.prependTo($('.mobile-sub-menu'));
-        allNumbers.appendTo($('.mobile-sub-menu'));
+        phones.insertBefore($('.close-marker'));
     } else {
         $('.basket').insertAfter($('.form-search'));
         menuInfo.insertAfter($('.header-menu.info .title'));
-        allNumbers.insertAfter($('.phones .title'));
+        phones.insertAfter($('.phones .title'));
     }
 
     $(window).resize(function(){
@@ -19,7 +19,6 @@ $(document).ready(function () {
             $('.basket').prependTo($('.header-bottom .block-content'));
             menuInfo.prependTo($('.mobile-sub-menu'));
         } else {
-            $('.mobile-sub-menu').removeClass('active');
             $('.basket').insertAfter($('.form-search'));
             menuInfo.insertAfter($('.header-menu.info .title'));
         }
@@ -35,6 +34,18 @@ $(document).ready(function () {
 
     $('.mobile-catalog').click(function() {
         $('.catalog-menu').slideToggle();
+    });
+
+    $('.catalog-menu .title').click(function() {
+        if ($(window).width() < '801'){
+            $(this).siblings('.sub-menu').slideToggle();
+        }
+    });
+
+    $('.prints-title').click(function() {
+        if ($(window).width() < '801'){
+            $('nav').slideToggle(600);
+        }
     });
 
     /** end of scripts for adaptive **/
