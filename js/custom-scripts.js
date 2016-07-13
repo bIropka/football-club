@@ -9,10 +9,14 @@ $(document).ready(function () {
         $('.basket').prependTo($('.header-bottom .block-content'));
         menuInfo.prependTo($('.mobile-sub-menu'));
         phones.insertBefore($('.close-marker'));
+        $('nav').css('display', 'none');
+        $('.catalog-menu').css('display', 'none');
     } else {
         $('.basket').insertAfter($('.form-search'));
-        menuInfo.insertAfter($('.header-menu.info .title'));
+        menuInfo.insertAfter($('.info-menu .title'));
         phones.insertAfter($('.phones .title'));
+        $('nav').css('display', 'block');
+        $('.catalog-menu').css('display', 'inline-block');
     }
 
     $(window).resize(function(){
@@ -20,10 +24,14 @@ $(document).ready(function () {
             $('.basket').prependTo($('.header-bottom .block-content'));
             menuInfo.prependTo($('.mobile-sub-menu'));
             phones.insertBefore($('.close-marker'));
+            $('nav').css('display', 'none');
+            $('.catalog-menu').css('display', 'none');
         } else {
             $('.basket').insertAfter($('.form-search'));
-            menuInfo.insertAfter($('.header-menu.info .title'));
+            menuInfo.insertAfter($('.info-menu .title'));
             phones.insertAfter($('.phones .title'));
+            $('nav').css('display', 'block');
+            $('.catalog-menu').css('display', 'inline-block');
         }
     });
 
@@ -40,9 +48,31 @@ $(document).ready(function () {
     });
 
     $('.catalog-menu .title').click(function() {
-        if ($(window).width() < '801'){
-            $(this).siblings('.sub-menu').slideToggle();
+        var titles = $('.catalog-menu .title');
+
+        if($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).siblings('.sub-menu').slideUp();
+            $(this).parent().removeClass('active');
+        } else {
+            titles.siblings('.sub-menu').slideUp();
+            titles.removeClass('active');
+            titles.parent().removeClass('active');
+            $(this).addClass('active');
+            $(this).siblings('.sub-menu').slideDown();
+            $(this).parent().addClass('active');
         }
+
+    });
+
+    $('.phones .title').click(function() {
+        $(this).siblings('.sub-menu').slideToggle();
+        $(this).parent().toggleClass('active');
+    });
+
+    $('.info-menu .title').click(function() {
+        $(this).siblings('.sub-menu').slideToggle();
+        $(this).parent().toggleClass('active');
     });
 
     $('.prints-title').click(function() {

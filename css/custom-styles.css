@@ -179,7 +179,7 @@ h2 {
     padding-top: 18.39378238341969%;
     background: url('../images/logo.png') no-repeat center;
     background-size: cover;
-    margin-top: 20px;
+    margin: 10px 0;
 }
 .mobile-catalog {
     display: none;
@@ -215,11 +215,11 @@ h2 {
     transition: 1s;
 }
 .catalog-menu {
-    display: inline-block;
     position: relative;
     margin: 5px 8% 15px 0;
 }
 .catalog-menu .title {
+    display: block;
     color: #ffffff;
     font-size: 18px;
     padding: 5px 25px 5px 0;
@@ -242,10 +242,10 @@ h2 {
     -o-transition: 0.5s;
     transition: 0.5s;
 }
-.catalog-menu:hover .title {
+.catalog-menu.active .title {
     color: #fadc26;
 }
-.catalog-menu:hover .title:after, .phones:hover .title:after, .info-menu:hover .title:after {
+.catalog-menu.active .title:after, .phones.active .title:after, .info-menu.active .title:after {
     -webkit-transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
@@ -284,7 +284,7 @@ h2 {
 .catalog-menu .sub-menu li a:hover {
     color: #fadc26;
 }
-.catalog-menu:hover .sub-menu, .phones:hover .sub-menu, .info-menu:hover .sub-menu {
+.catalog-menu.active .sub-menu, .phones.active .sub-menu, .info-menu.active .sub-menu {
     display: block;
 }
 .phones {
@@ -300,6 +300,7 @@ h2 {
     background: #fadc26;
     text-transform: uppercase;
     position: relative;
+    cursor: pointer;
 }
 .phones .title:before {
     content: '';
@@ -346,6 +347,7 @@ h2 {
     border: 1px solid #ffffff;
     font-size: 14px;
     color: #ffffff;
+    cursor: pointer;
 }
 .info-menu .sub-menu {
     display: none;
@@ -486,6 +488,9 @@ h2 {
     color: #ffffff;
     background: #1b1b1b;
     padding: 2.5% 10%;
+}
+nav {
+    display: block;
 }
 nav ul {
     display: block;
@@ -886,7 +891,7 @@ nav ul li a:hover, nav ul li.active a  {
         display: none;
     }
     .mobile-sub-menu ul:nth-child(1) {
-        display: block;
+        display: block!important;
         width: 100%;
         padding: 30px 0 5px;
     }
@@ -902,7 +907,7 @@ nav ul li a:hover, nav ul li.active a  {
         color: #ffffff;
     }
     .mobile-sub-menu ul:nth-child(2) {
-        display: block;
+        display: block!important;
         padding: 5px 0 10px;
         text-align: center;
     }
@@ -982,7 +987,6 @@ nav ul li a:hover, nav ul li.active a  {
         display: block;
     }
     .catalog-menu {
-        display: none;
         width: 100%;
         padding: 0;
         margin: 0;
@@ -1066,9 +1070,9 @@ nav ul li a:hover, nav ul li.active a  {
         transition: 1s;
     }
     nav {
-        display: none;
         background: #ececec;
     }
+
     nav ul {
         border: none;
         margin-bottom: 0;
