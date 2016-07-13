@@ -682,6 +682,44 @@ nav ul li a:hover, nav ul li.active a  {
     z-index: 1;
 }
 
+/****** PRODUCT-CARD PAGE *******
+********************************/
+.content-header {
+    background: #ececec;
+    margin-bottom: 2%;
+    padding: 0.4% 0;
+}
+.breadcrumbs {
+    display: inline-block;
+}
+.breadcrumbs li {
+    font-family: "OpenSans SemiBold", sans-serif;
+    font-size: 14px;
+}
+.breadcrumbs li:after {
+    content: '/';
+    display: inline-block;
+    margin: 0 5px 0 8px;
+    font-family: "OpenSans Light", sans-serif;
+}
+.breadcrumbs li:last-child:after {
+    display: none;
+}
+.breadcrumbs li a {
+    font-size: 14px;
+}
+
+.articul {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 5%;
+}
+.articul-value {
+    display: inline-block;
+    font-family: "OpenSans SemiBold", sans-serif;
+    font-size: 14px;
+    margin-left: 5px;
+}
 
 /* footer */
 .footer {

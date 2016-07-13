@@ -44,11 +44,20 @@ $(document).ready(function () {
     });
 
     $('.mobile-catalog').click(function() {
+
+        $('.mobile-sub-menu').removeClass('active');
         $('.catalog-menu').slideToggle();
+
+        if ($(window).width() < '801'){
+            $('nav').slideUp(600);
+        }
+
     });
 
-    $('.catalog-menu .title').click(function() {
-        var titles = $('.catalog-menu .title');
+    $('.top-menu .title').click(function() {
+
+        var titles = $('.top-menu .title');
+        $('.mobile-sub-menu').removeClass('active');
 
         if($(this).hasClass('active')) {
             $(this).removeClass('active');
@@ -65,18 +74,10 @@ $(document).ready(function () {
 
     });
 
-    $('.phones .title').click(function() {
-        $(this).siblings('.sub-menu').slideToggle();
-        $(this).parent().toggleClass('active');
-    });
-
-    $('.info-menu .title').click(function() {
-        $(this).siblings('.sub-menu').slideToggle();
-        $(this).parent().toggleClass('active');
-    });
-
     $('.prints-title').click(function() {
         if ($(window).width() < '801'){
+            $('.mobile-sub-menu').removeClass('active');
+            $('.catalog-menu').slideUp();
             $('nav').slideToggle(600);
         }
     });
