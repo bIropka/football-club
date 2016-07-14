@@ -284,9 +284,6 @@ h2 {
 .catalog-menu .sub-menu li a:hover {
     color: #fadc26;
 }
-.catalog-menu.active .sub-menu, .phones.active .sub-menu, .info-menu.active .sub-menu {
-    display: block;
-}
 .phones {
     display: inline-block;
     margin: 0 0 15px 0;

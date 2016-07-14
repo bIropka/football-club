@@ -54,6 +54,15 @@ $(document).ready(function () {
 
     });
 
+    $('.top-menu .title').hover(
+        function() {
+            $(this).parent().addClass('active');
+        },
+        function() {
+            $(this).parent().removeClass('active');
+        }
+    );
+
     $('.top-menu .title').click(function() {
 
         var titles = $('.top-menu .title');
@@ -62,14 +71,11 @@ $(document).ready(function () {
         if($(this).hasClass('active')) {
             $(this).removeClass('active');
             $(this).siblings('.sub-menu').slideUp();
-            $(this).parent().removeClass('active');
         } else {
             titles.siblings('.sub-menu').slideUp();
             titles.removeClass('active');
-            titles.parent().removeClass('active');
             $(this).addClass('active');
             $(this).siblings('.sub-menu').slideDown();
-            $(this).parent().addClass('active');
         }
 
     });
