@@ -853,6 +853,9 @@ nav ul li a:hover, nav ul li.active a  {
     color: #ffffff;
     background: #1b1b1b;
 }
+.size-chooser ul li:first-child {
+    border-left: 1px solid #1b1b1b;
+}
 .size-chooser ul li:last-child {
     display: block;
     width: auto;
