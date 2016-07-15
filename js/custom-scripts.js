@@ -153,15 +153,15 @@ $(document).ready(function () {
                 switch(getFirstClassName(this)) {
                     case 'item-for-men':
                         $('.product-slider-for-men').addClass('active');
-                        $('.product-slider').slick('slickGoTo', 0);
+                        //$('.product-slider').slick('slickGoTo', 0);
                         break;
                     case 'item-for-women':
                         $('.product-slider-for-women').addClass('active');
-                        $('.product-slider').slick('slickGoTo', 0);
+                        //$('.product-slider').slick('slickGoTo', 0);
                         break;
                     case 'item-for-children':
                         $('.product-slider-for-children').addClass('active');
-                        $('.product-slider').slick('slickGoTo', 0);
+                        //$('.product-slider').slick('slickGoTo', 0);
                         break;
                 }
             }
