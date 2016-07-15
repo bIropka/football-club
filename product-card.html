@@ -149,6 +149,32 @@
 
     <div class="block-content product-content">
 
+        <p class="title prints-title">Каталог принтов</p>
+
+        <nav>
+
+            <ul>
+                <li><a href="#">Патриотические</a></li>
+                <li class="active"><a href="#">Парные</a></li>
+                <li><a href="#">Надписи</a></li>
+                <li><a href="#">Имена</a></li>
+                <li><a href="#">Рисунки</a></li>
+                <li><a href="#">Идеальное тело</a></li>
+                <li><a href="#">Рыбалка / Охота</a></li>
+                <li><a href="#">Спорт</a></li>
+                <li><a href="#">Фильмы, сериалы</a></li>
+                <li><a href="#">На подарок</a></li>
+                <li><a href="#">Клубные / Для диджеев</a></li>
+                <li><a href="#">Свадебные, молодоженам</a></li>
+                <li><a href="#">Игры</a></li>
+                <li><a href="#">Рок</a></li>
+                <li><a href="#">Мультфильмы</a></li>
+                <li><a href="#">Авто / Мото</a></li>
+                <li><a href="#">Супергерои</a></li>
+            </ul>
+
+        </nav>
+
         <div class="clearfix product-block">
 
             <div class="left-column product-image-large">
@@ -157,111 +183,133 @@
 
             <div class="right-column product-info">
 
-                <h1>Футболка<span class="name">Самая лучшая мама</span></h1>
+                <form id="form-to-buy" action="#" class="form-to-buy">
 
-                <div class="to-buy">
+                    <h1>Футболка<span class="product-name">Самая лучшая мама</span></h1>
 
-                    <div class="cost left-column"><span class="cost-value">1289</span> грн.</div>
+                    <div class="to-buy clearfix">
 
-                    <button class="right-column">купить</button>
+                        <div class="cost left-column"><span class="cost-value">1289</span> грн.</div>
 
-                </div>
+                        <input id="to-buy" type="submit" class="right-column" value="купить" />
 
-                <ul>
-                    <li>s</li>
-                    <li>m</li>
-                    <li>l</li>
-                    <li>xl</li>
-                    <li>2xl</li>
-                    <li>3xl</li>
-                    <li><a href="#">таблица размеров</a></li>
-                </ul>
+                    </div>
 
-                <div class="color-chooser">
+                    <div class="size-chooser">
 
-                    <p class="title">Выбор цвета:</p>
+                        <ul class="clearfix">
+                            <li>s</li>
+                            <li class="active">m</li>
+                            <li>l</li>
+                            <li>xl</li>
+                            <li>2xl</li>
+                            <li>3xl</li>
+                            <li class="link-item"><a href="#">таблица размеров</a></li>
+                        </ul>
 
-                    <ul>
-                        <li class="white-block"></li>
-                        <li class="black-block"></li>
-                        <li class="red-block"></li>
-                        <li class="yellow-block"></li>
-                        <li class="blue-block"></li>
-                    </ul>
+                        <label class="hidden-input"><input id="size-chooser" type="text" value="m"/></label>
 
-                </div>
+                    </div>
+
+                    <div class="color-chooser">
+
+                        <p class="title">Выбор цвета:</p>
+
+                        <ul>
+                            <li class="white active"></li>
+                            <li class="black"></li>
+                            <li class="red"></li>
+                            <li class="yellow"></li>
+                            <li class="blue"></li>
+                        </ul>
+
+                        <label class="hidden-input"><input id="color-chooser" type="text" value="white"/></label>
+
+                    </div>
+
+                </form>
 
                 <ul class="product-slider-menu">
-                    <li class="item-for-men"></li>
-                    <li class="item-for-women"></li>
-                    <li class="item-for-children"></li>
+                    <li class="item-for-men active">Мужчинам</li>
+                    <li class="item-for-women">Женщинам</li>
+                    <li class="item-for-children">Детям</li>
                 </ul>
 
-                <div class="product-slider-wrapper product-slider-for-men">
+                <div class="product-slider-wrapper product-slider-for-men active">
 
-                    <div class="product-slider">
+                    <div class="product-slider slider-for-men">
 
                         <div class="slide">
                             <a class="product-image" href="#">
-                                <img src="images/image-product.jpg" alt="product"/>
+                                <img src="images/image-product-1.jpg" alt="product"/>
                                 <p class="product-name">Born to fish</p>
                             </a>
                         </div>
 
                         <div class="slide">
                             <a class="product-image" href="#">
-                                <img src="images/image-product.jpg" alt="product"/>
+                                <img src="images/image-product-2.jpg" alt="product"/>
                                 <p class="product-name">Опасно! Рыболов</p>
                             </a>
                         </div>
 
                         <div class="slide">
                             <a class="product-image" href="#">
-                                <img src="images/image-product.jpg" alt="product"/>
+                                <img src="images/image-product-3.jpg" alt="product"/>
                                 <p class="product-name">Я не москаль</p>
+                            </a>
+                        </div>
+
+                        <div class="slide">
+                            <a class="product-image" href="#">
+                                <img src="images/image-product-2.jpg" alt="product"/>
+                                <p class="product-name">Опасно! Рыболов</p>
                             </a>
                         </div>
 
                     </div>
 
-                    <div class="product-slider-control">
-                        <div class="left-control"></div>
-                        <div class="right-control"></div>
-                    </div>
+                    <div class="product-slider-control left-control"></div>
+                    <div class="product-slider-control right-control"></div>
 
                 </div>
 
                 <div class="product-slider-wrapper product-slider-for-women">
 
-                    <div class="product-slider">
+                    <div class="product-slider slider-for-women">
 
                         <div class="slide">
                             <a class="product-image" href="#">
-                                <img src="images/image-product.jpg" alt="product"/>
+                                <img src="images/image-product-4.jpg" alt="product"/>
                                 <p class="product-name">Born to fish</p>
                             </a>
                         </div>
 
                         <div class="slide">
                             <a class="product-image" href="#">
-                                <img src="images/image-product.jpg" alt="product"/>
+                                <img src="images/image-product-1.jpg" alt="product"/>
                                 <p class="product-name">Опасно! Рыболов</p>
                             </a>
                         </div>
 
                         <div class="slide">
                             <a class="product-image" href="#">
-                                <img src="images/image-product.jpg" alt="product"/>
+                                <img src="images/image-product-2.jpg" alt="product"/>
                                 <p class="product-name">Я не москаль</p>
+                            </a>
+                        </div>
+
+                        <div class="slide">
+                            <a class="product-image" href="#">
+                                <img src="images/image-product-1.jpg" alt="product"/>
+                                <p class="product-name">Опасно! Рыболов</p>
                             </a>
                         </div>
 
                     </div>
 
-                    <div class="product-slider-control">
-                        <div class="left-control"></div>
-                        <div class="right-control"></div>
-                    </div>
+                    <div class="product-slider-control left-control"></div>
+                    <div class="product-slider-control right-control"></div>
 
                 </div>
 
@@ -271,31 +319,36 @@
 
                         <div class="slide">
                             <a class="product-image" href="#">
-                                <img src="images/image-product.jpg" alt="product"/>
+                                <img src="images/image-product-3.jpg" alt="product"/>
                                 <p class="product-name">Born to fish</p>
                             </a>
                         </div>
 
                         <div class="slide">
                             <a class="product-image" href="#">
-                                <img src="images/image-product.jpg" alt="product"/>
+                                <img src="images/image-product-1.jpg" alt="product"/>
                                 <p class="product-name">Опасно! Рыболов</p>
                             </a>
                         </div>
 
                         <div class="slide">
                             <a class="product-image" href="#">
-                                <img src="images/image-product.jpg" alt="product"/>
+                                <img src="images/image-product-4.jpg" alt="product"/>
                                 <p class="product-name">Я не москаль</p>
+                            </a>
+                        </div>
+
+                        <div class="slide">
+                            <a class="product-image" href="#">
+                                <img src="images/image-product-1.jpg" alt="product"/>
+                                <p class="product-name">Опасно! Рыболов</p>
                             </a>
                         </div>
 
                     </div>
 
-                    <div class="product-slider-control">
-                        <div class="left-control"></div>
-                        <div class="right-control"></div>
-                    </div>
+                    <div class="product-slider-control left-control"></div>
+                    <div class="product-slider-control right-control"></div>
 
                 </div>
 
@@ -307,100 +360,183 @@
             Футболка самая лучшая мама на свете предлагается во всех ходовых цветах и всегда в наличии. Приятный к телу хлопок Джерси, рисунок долговечен, печатается на профессиональном оборудовании. В производстве такой одежды используются только безвредные для здоровья красители, что подтверждается сертификатами качества. Здесь можно выбрать футболки с надписями для мамы. Доставка во все города Украины с оплатой при получении. Вы застрахованы от производственного брака, мы заменим товар или вернем деньги.
         </p>
 
-        <ul class="product-menu">
-            <li class="more-goods">Похожие товары</li>
-            <li class="shipping-payment">Доставка и оплата</li>
-            <li class="about-product">О товаре</li>
-            <li class="to-reviews">Отзывы</li>
+        <ul class="bottom-menu">
+            <li class="item-analogs active">Похожие товары</li>
+            <li class="item-shipping-payment">Доставка и оплата</li>
+            <li class="item-about-product">О товаре</li>
+            <li class="item-product-reviews">Отзывы</li>
         </ul>
 
-        <div class="goods-slider-wrapper">
+        <ul class="bottom-menu-item analogs active clearfix">
 
-            <div class="goods-slider">
+            <li>
+                <a class="product-image" href="#">
+                    <img src="images/image-product-1.jpg" alt="product"/>
+                    <p class="product-name">Born to fish</p>
+                </a>
+            </li>
 
-                <div class="slide">
-                    <a class="product-image" href="#">
-                        <img src="images/image-product.jpg" alt="product"/>
-                        <p class="product-name">Born to fish</p>
-                    </a>
+            <li>
+                <a class="product-image" href="#">
+                    <img src="images/image-product-2.jpg" alt="product"/>
+                    <p class="product-name">Опасно! Рыболов</p>
+                </a>
+            </li>
+
+            <li>
+                <a class="product-image" href="#">
+                    <img src="images/image-product-3.jpg" alt="product"/>
+                    <p class="product-name">Опасно! Рыболов</p>
+                </a>
+
+            </li>
+
+            <li>
+                <a class="product-image" href="#">
+                    <img src="images/image-product-3.jpg" alt="product"/>
+                    <p class="product-name">Born to fish</p>
+                </a>
+            </li>
+
+            <li>
+                <a class="product-image" href="#">
+                    <img src="images/image-product-2.jpg" alt="product"/>
+                    <p class="product-name">Опасно! Рыболов</p>
+                </a>
+            </li>
+
+            <li>
+                <a class="product-image" href="#">
+                    <img src="images/image-product-1.jpg" alt="product"/>
+                    <p class="product-name">Опасно! Рыболов</p>
+                </a>
+            </li>
+
+            <li>
+                <a class="product-image" href="#">
+                    <img src="images/image-product-4.jpg" alt="product"/>
+                    <p class="product-name">Опасно! Рыболов</p>
+                </a>
+            </li>
+
+            <li>
+                <a class="product-image" href="#">
+                    <img src="images/image-product-4.jpg" alt="product"/>
+                    <p class="product-name">Опасно! Рыболов</p>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="bottom-menu-item shipping-payment">
+
+            <p class="title">Доставка и оплата</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat diam et urna rhoncus, eget iaculis sem tincidunt. Sed eu neque at leo rhoncus sollicitudin. Donec eu imperdiet leo, sed sodales quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur porttitor consectetur lacus a elementum. Morbi consequat arcu quis vestibulum tincidunt. Curabitur non dolor non nunc lacinia faucibus. Praesent risus odio, vulputate scelerisque tortor nec, commodo dapibus purus. Cras malesuada convallis lectus vel molestie. Morbi vel dapibus magna.</p>
+
+            <p>Integer et massa diam. Cras ligula urna, efficitur et diam in, euismod elementum purus. Duis viverra iaculis lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu convallis magna. Sed efficitur mollis neque at semper. In commodo quam et tristique imperdiet. Quisque congue tempus purus, nec egestas neque ullamcorper id. Nullam turpis odio, egestas quis est sed, porta porta augue. Curabitur tincidunt malesuada tortor eget dapibus. Curabitur elementum sapien ut orci accumsan porttitor.</p>
+
+            <p>Maecenas semper commodo consequat. In augue augue, venenatis porttitor nisi id, eleifend gravida enim. Integer vel lobortis leo, vitae eleifend libero. Sed efficitur, ante eget tempor tempus, libero neque suscipit est, vitae rhoncus urna diam eget mi. Integer quis est vitae lectus convallis bibendum non sit amet nisl. Fusce vulputate posuere arcu, ut egestas orci ultricies in. Vivamus sit amet libero vulputate, vulputate neque at, condimentum purus. Proin justo felis, tincidunt quis vulputate eu, egestas ut libero. Vivamus quis auctor mauris. Suspendisse in justo mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin ultrices, lectus eget tristique tempor, magna ipsum interdum purus, et elementum erat urna in nisl.</p>
+
+            <p>Proin scelerisque dui vel elementum dapibus. Morbi consectetur justo in lacus consectetur pellentesque. In in facilisis urna. Praesent vel sollicitudin purus. Cras in augue molestie, lobortis eros a, euismod mi. Praesent consequat maximus urna et porttitor. Proin cursus dui elit, sed finibus leo dignissim at. Etiam libero dolor, elementum id tincidunt non, vestibulum ultrices nisi. Pellentesque id nunc nec augue varius interdum quis et leo. Vestibulum elementum vulputate eros non dictum.</p>
+
+            <p>Praesent magna erat, aliquet vel ultrices vitae, sodales a mi. Ut risus nisl, sodales non dolor ut, dignissim luctus magna. Donec iaculis sem sit amet felis ornare vulputate. Quisque faucibus dolor vitae enim sagittis viverra. Mauris maximus semper mollis. Vestibulum dapibus gravida hendrerit. Nulla ac iaculis felis. Integer porta velit sit amet tellus vestibulum pulvinar vehicula non nisi. Praesent dignissim magna mattis tortor convallis, eget ultrices nibh iaculis. In nunc enim, pellentesque vitae nisl eu, lacinia pellentesque lectus. Phasellus ut hendrerit nisi. In tortor nisl, congue vel magna at, accumsan gravida massa. Donec molestie, dolor ut elementum rutrum, leo eros semper leo, quis consequat libero lorem sit amet quam. Ut quam ante, efficitur at dignissim vitae, dapibus ut nibh.</p>
+
+        </div>
+
+        <div class="bottom-menu-item about-product">
+
+            <p class="title">О товаре</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat diam et urna rhoncus, eget iaculis sem tincidunt. Sed eu neque at leo rhoncus sollicitudin. Donec eu imperdiet leo, sed sodales quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur porttitor consectetur lacus a elementum. Morbi consequat arcu quis vestibulum tincidunt. Curabitur non dolor non nunc lacinia faucibus. Praesent risus odio, vulputate scelerisque tortor nec, commodo dapibus purus. Cras malesuada convallis lectus vel molestie. Morbi vel dapibus magna.</p>
+
+            <p>Integer et massa diam. Cras ligula urna, efficitur et diam in, euismod elementum purus. Duis viverra iaculis lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu convallis magna. Sed efficitur mollis neque at semper. In commodo quam et tristique imperdiet. Quisque congue tempus purus, nec egestas neque ullamcorper id. Nullam turpis odio, egestas quis est sed, porta porta augue. Curabitur tincidunt malesuada tortor eget dapibus. Curabitur elementum sapien ut orci accumsan porttitor.</p>
+
+            <p>Maecenas semper commodo consequat. In augue augue, venenatis porttitor nisi id, eleifend gravida enim. Integer vel lobortis leo, vitae eleifend libero. Sed efficitur, ante eget tempor tempus, libero neque suscipit est, vitae rhoncus urna diam eget mi. Integer quis est vitae lectus convallis bibendum non sit amet nisl. Fusce vulputate posuere arcu, ut egestas orci ultricies in. Vivamus sit amet libero vulputate, vulputate neque at, condimentum purus. Proin justo felis, tincidunt quis vulputate eu, egestas ut libero. Vivamus quis auctor mauris. Suspendisse in justo mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin ultrices, lectus eget tristique tempor, magna ipsum interdum purus, et elementum erat urna in nisl.</p>
+
+            <p>Proin scelerisque dui vel elementum dapibus. Morbi consectetur justo in lacus consectetur pellentesque. In in facilisis urna. Praesent vel sollicitudin purus. Cras in augue molestie, lobortis eros a, euismod mi. Praesent consequat maximus urna et porttitor. Proin cursus dui elit, sed finibus leo dignissim at. Etiam libero dolor, elementum id tincidunt non, vestibulum ultrices nisi. Pellentesque id nunc nec augue varius interdum quis et leo. Vestibulum elementum vulputate eros non dictum.</p>
+
+            <p>Praesent magna erat, aliquet vel ultrices vitae, sodales a mi. Ut risus nisl, sodales non dolor ut, dignissim luctus magna. Donec iaculis sem sit amet felis ornare vulputate. Quisque faucibus dolor vitae enim sagittis viverra. Mauris maximus semper mollis. Vestibulum dapibus gravida hendrerit. Nulla ac iaculis felis. Integer porta velit sit amet tellus vestibulum pulvinar vehicula non nisi. Praesent dignissim magna mattis tortor convallis, eget ultrices nibh iaculis. In nunc enim, pellentesque vitae nisl eu, lacinia pellentesque lectus. Phasellus ut hendrerit nisi. In tortor nisl, congue vel magna at, accumsan gravida massa. Donec molestie, dolor ut elementum rutrum, leo eros semper leo, quis consequat libero lorem sit amet quam. Ut quam ante, efficitur at dignissim vitae, dapibus ut nibh.</p>
+
+        </div>
+
+        <div class="bottom-menu-item product-reviews">
+
+            <p class="title">Отзывы</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat diam et urna rhoncus, eget iaculis sem tincidunt. Sed eu neque at leo rhoncus sollicitudin. Donec eu imperdiet leo, sed sodales quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur porttitor consectetur lacus a elementum. Morbi consequat arcu quis vestibulum tincidunt. Curabitur non dolor non nunc lacinia faucibus. Praesent risus odio, vulputate scelerisque tortor nec, commodo dapibus purus. Cras malesuada convallis lectus vel molestie. Morbi vel dapibus magna.</p>
+
+            <p>Integer et massa diam. Cras ligula urna, efficitur et diam in, euismod elementum purus. Duis viverra iaculis lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu convallis magna. Sed efficitur mollis neque at semper. In commodo quam et tristique imperdiet. Quisque congue tempus purus, nec egestas neque ullamcorper id. Nullam turpis odio, egestas quis est sed, porta porta augue. Curabitur tincidunt malesuada tortor eget dapibus. Curabitur elementum sapien ut orci accumsan porttitor.</p>
+
+            <p>Maecenas semper commodo consequat. In augue augue, venenatis porttitor nisi id, eleifend gravida enim. Integer vel lobortis leo, vitae eleifend libero. Sed efficitur, ante eget tempor tempus, libero neque suscipit est, vitae rhoncus urna diam eget mi. Integer quis est vitae lectus convallis bibendum non sit amet nisl. Fusce vulputate posuere arcu, ut egestas orci ultricies in. Vivamus sit amet libero vulputate, vulputate neque at, condimentum purus. Proin justo felis, tincidunt quis vulputate eu, egestas ut libero. Vivamus quis auctor mauris. Suspendisse in justo mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin ultrices, lectus eget tristique tempor, magna ipsum interdum purus, et elementum erat urna in nisl.</p>
+
+            <p>Proin scelerisque dui vel elementum dapibus. Morbi consectetur justo in lacus consectetur pellentesque. In in facilisis urna. Praesent vel sollicitudin purus. Cras in augue molestie, lobortis eros a, euismod mi. Praesent consequat maximus urna et porttitor. Proin cursus dui elit, sed finibus leo dignissim at. Etiam libero dolor, elementum id tincidunt non, vestibulum ultrices nisi. Pellentesque id nunc nec augue varius interdum quis et leo. Vestibulum elementum vulputate eros non dictum.</p>
+
+            <p>Praesent magna erat, aliquet vel ultrices vitae, sodales a mi. Ut risus nisl, sodales non dolor ut, dignissim luctus magna. Donec iaculis sem sit amet felis ornare vulputate. Quisque faucibus dolor vitae enim sagittis viverra. Mauris maximus semper mollis. Vestibulum dapibus gravida hendrerit. Nulla ac iaculis felis. Integer porta velit sit amet tellus vestibulum pulvinar vehicula non nisi. Praesent dignissim magna mattis tortor convallis, eget ultrices nibh iaculis. In nunc enim, pellentesque vitae nisl eu, lacinia pellentesque lectus. Phasellus ut hendrerit nisi. In tortor nisl, congue vel magna at, accumsan gravida massa. Donec molestie, dolor ut elementum rutrum, leo eros semper leo, quis consequat libero lorem sit amet quam. Ut quam ante, efficitur at dignissim vitae, dapibus ut nibh.</p>
+
+        </div>
+
+    </div>
+
+    <ul class="social-links">
+
+        <li><a class="icon-vk" href="#" target="_blank"></a></li>
+
+        <li><a class="icon-tw" href="#" target="_blank"></a></li>
+
+        <li><a class="icon-google" href="#" target="_blank"></a></li>
+
+    </ul>
+
+    <div class="footer">
+
+        <div class="footer-top">
+
+            <div class="block-content">
+
+                <div class="left-column footer-nav">
+
+                    <p class="title">Помощь по сайту:</p>
+
+                    <ul class="footer-links">
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Оплата</a></li>
+                        <li><a href="#">Задать вопрос</a></li>
+                        <li><a href="#">Свой дизайн</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Размеры</a></li>
+                    </ul>
+
                 </div>
 
-                <div class="slide">
-                    <a class="product-image" href="#">
-                        <img src="images/image-product.jpg" alt="product"/>
-                        <p class="product-name">Опасно! Рыболов</p>
-                    </a>
+                <div class="left-column delivery">
+
+                    <p class="title">Мы доставляем нашу продукцию по всей Украине</p>
+
+                    <div class="image-map"></div>
+
                 </div>
 
-                <div class="slide">
-                    <a class="product-image" href="#">
-                        <img src="images/image-product.jpg" alt="product"/>
-                        <p class="product-name">Я не москаль</p>
-                    </a>
-                </div>
+                <div class="right-column payment">
 
-                <div class="slide">
-                    <a class="product-image" href="#">
-                        <img src="images/image-product.jpg" alt="product"/>
-                        <p class="product-name">Я не москаль</p>
-                    </a>
+                    <p class="title">Принимаем оплату:</p>
+
+                    <div class="image-payment"></div>
+
                 </div>
 
             </div>
 
         </div>
 
-        <div class="footer">
+        <div class="footer-bottom">
 
-            <div class="footer-top">
+            <div class="block-content">
 
-                <div class="block-content">
+                <div class="right-column our-email">e-mail: <a href="mailto:info@futbokraina.com.ua">info@futbokraina.com.ua</a></div>
 
-                    <div class="left-column footer-nav">
-
-                        <p class="title">Помощь по сайту:</p>
-
-                        <ul class="footer-links">
-                            <li><a href="#">Доставка</a></li>
-                            <li><a href="#">Отзывы</a></li>
-                            <li><a href="#">Оплата</a></li>
-                            <li><a href="#">Задать вопрос</a></li>
-                            <li><a href="#">Свой дизайн</a></li>
-                            <li><a href="#">Контакты</a></li>
-                            <li><a href="#">Размеры</a></li>
-                        </ul>
-
-                    </div>
-
-                    <div class="left-column delivery">
-
-                        <p class="title">Мы доставляем нашу продукцию по всей Украине</p>
-
-                        <div class="image-map"></div>
-
-                    </div>
-
-                    <div class="right-column payment">
-
-                        <p class="title">Принимаем оплату:</p>
-
-                        <div class="image-payment"></div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="footer-bottom">
-
-                <div class="block-content">
-
-                    <div class="right-column our-email">e-mail: <a href="mailto:info@futbokraina.com.ua">info@futbokraina.com.ua</a></div>
-
-                    <div class="copyrights left-column">Copyright © 2014-2016. Все права защищены. Украина, г.Днепропетровск</div>
-
-                </div>
+                <div class="copyrights left-column">Copyright © 2014-2016. Все права защищены. Украина, г.Днепропетровск</div>
 
             </div>
 
