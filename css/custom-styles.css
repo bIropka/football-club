@@ -391,18 +391,28 @@ ul li {
     color: #ffffff;
     width: 90%;
     background: transparent;
-    padding: 8px 10px 8px 25px;
+    padding: 0 10px 0 25px;
+    height: 40px;
+    line-height: 40px;
 }
-.form-search:after {
-    content: '';
+.form-search .form-submit {
     display: block;
-    width: 18px;
-    height: 18px;
-    background: url('../images/sprite-search.png') no-repeat left center;
-    background-size: cover;
+    width: 40px;
+    height: 40px;
+    background: transparent url('../images/sprite-search.png') no-repeat -50% center;
+    background-size: auto 60%;
     position: absolute;
-    right: 15px;
-    top: 10px;
+    top: 0;
+    right: 0;
+    -webkit-transition: 0s;
+    -moz-transition: 0s;
+    -ms-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
+}
+.form-search:hover .form-submit {
+    background: url('../images/sprite-search.png') no-repeat 150% center, radial-gradient(circle at center, rgba(250, 220, 38, 0.8), rgba(250,220,38, 0) 70%) no-repeat;
+    background-size: auto 60%, cover;
 }
 .basket {
     display: inline-block;
@@ -1344,7 +1354,11 @@ nav ul li a:hover, nav ul li.active a  {
     .form-search input[type="text"] {
         font-size: 14px;
         color: #1b1b1b;
-        padding: 5px 10px 5px 25px;
+        padding: 0 10px 0 25px;
+    }
+    .form-search .form-submit,.form-search:hover .form-submit {
+        background: url('../images/sprite-search.png') no-repeat 150% center;
+        background-size: auto 60%;
     }
     .form-field::-webkit-input-placeholder {font-size: 14px;color: #1b1b1b;opacity: 1;}
     .form-field::-moz-placeholder {font-size: 14px;color: #1b1b1b;opacity: 1;}
