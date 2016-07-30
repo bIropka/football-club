@@ -113,6 +113,28 @@ ul li {
 .blue {background: #0000ff;}
 .blue:after {background: #0000ff;}
 
+.indigo {background: #4b0082;}
+.indigo:after {background: #4b0082;}
+
+.green {background: #008000;}
+.green:after {background: #008000;}
+
+.grey {background: #808080;}
+.grey:after {background: #808080;}
+
+.orange {background: #ffa500;}
+.orange:after {background: #ffa500;}
+
+.violet {background: #ee82ee;}
+.violet:after {background: #ee82ee;}
+
+.brown {background: #a52a2a;}
+.brown:after {background: #a52a2a;}
+
+.rose {background: #ffe4e1;}
+.rose:after {background: #ffe4e1;}
+
+
 /* header */
 .header-top {
     background: #fadc26;
@@ -411,7 +433,7 @@ ul li {
     transition: 0s;
 }
 .form-search:hover .form-submit {
-    background: url('../images/sprite-search.png') no-repeat 150% center, radial-gradient(circle at center, rgba(250, 220, 38, 0.8), rgba(250,220,38, 0) 70%) no-repeat;
+    background: url('../images/sprite-search.png') no-repeat 153% center, radial-gradient(circle at center, rgba(250, 220, 38, 0.8), rgba(250,220,38, 0) 70%) no-repeat;
     background-size: auto 60%, cover;
 }
 .basket {
@@ -607,6 +629,7 @@ nav ul li a:hover, nav ul li.active a  {
     color: #ffffff;
     line-height: 45px;
 }
+
 .product-card .cost .cost-value {
     font-family: "OpenSans ExtraBold", sans-serif;
     color: #ffffff;
@@ -623,21 +646,7 @@ nav ul li a:hover, nav ul li.active a  {
     line-height: 45px;
     color: #ffffff;
     font-family: "OpenSans Regular", sans-serif;
-    padding-left: 15%;
     position: relative;
-}
-.product-card button:before {
-    content: '';
-    display: block;
-    width: 35px;
-    height: 35px;
-    background: url('../images/icon-cart-white.png') no-repeat center;
-    background-size: cover;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 10%;
 }
 .product-card button:hover {
     color: #1b1b1b;
@@ -897,11 +906,21 @@ nav ul li a:hover, nav ul li.active a  {
     font-size: 16px;
     margin-bottom: 10px;
 }
+
+.color-chooser ul {
+    display: block;
+    width: 100%;
+    -moz-text-align-last: justify;
+    -ms-text-align-last: justify;
+    text-align-last: justify;
+    text-align: justify;
+}
+
 .color-chooser ul li {
-    width: 45px;
-    height: 40px;
+    width: 7%;
+    padding-top: 5%;
     border: 1px solid #1b1b1b;
-    margin-right: 3px;
+    margin: 10px 0;
     position: relative;
     cursor: pointer;
 }
@@ -1490,45 +1509,16 @@ nav ul li a:hover, nav ul li.active a  {
         border: none;
     }
     .product-card .cost {
-        display: block;
-        width: 45%;
         height: 45px;
-        background: #1b1b1b;
         font-size: 16px;
-        color: #ffffff;
-        line-height: 45px;
     }
     .product-card .cost .cost-value {
-        font-family: "OpenSans ExtraBold", sans-serif;
-        color: #ffffff;
         font-size: 28px;
         line-height: 45px;
     }
     .product-card button {
-        display: block;
-        width: 55%;
         height: 45px;
-        background: #f79c2d;
-        text-transform: uppercase;
         font-size: 18px;
-        line-height: 45px;
-        color: #ffffff;
-        font-family: "OpenSans Regular", sans-serif;
-        padding-left: 15%;
-        position: relative;
-    }
-    .product-card button:before {
-        content: '';
-        display: block;
-        width: 35px;
-        height: 35px;
-        background: url('../images/icon-cart-white.png') no-repeat center;
-        background-size: cover;
-        margin: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 10%;
     }
     .product-card:hover .product-image {
         border: none;
@@ -1691,11 +1681,6 @@ nav ul li a:hover, nav ul li.active a  {
     }
     .color-chooser .title {
         font-size: 20px;
-    }
-    .color-chooser ul li {
-        width: 65px;
-        height: 60px;
-        margin-right: 5px;
     }
     .product-sliders {
         margin-bottom: 10%;
@@ -1865,11 +1850,6 @@ nav ul li a:hover, nav ul li.active a  {
     .color-chooser .title {
         font-size: 18px;
     }
-    .color-chooser ul li {
-        width: 45px;
-        height: 40px;
-        margin-right: 3px;
-    }
     .product-sliders {
         min-height: 110px;
     }
@@ -1960,11 +1940,6 @@ nav ul li a:hover, nav ul li.active a  {
         font-size: 11px;
         line-height: 1.3;
         padding-top: 5px;
-    }
-    .color-chooser ul li {
-        width: 40px;
-        height: 35px;
-        margin-right: 3px;
     }
     .product-slider-menu li {
         font-size: 12px;
